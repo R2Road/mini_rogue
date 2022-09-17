@@ -18,6 +18,18 @@ namespace pmr
 
 		const char String4Version[19] = { 'T', 'i', 'm', 'e', 'T', 'i', 'm', 'e', 'r', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '\0' };
 
+
+		const char* const String4Road2Version_0_0_1 = {
+			"### Road 2 Version 0.0.1 ###"
+			"\n"
+			"\n"	"[ ] " "Make Empty Stage"
+			"\n"	"[ ] " "Make PC"
+			"\n"	"[ ] " "Move PC"
+			"\n"	"[ ] " "Make Dummy Object"
+			"\n"	"[ ] " "Add Statistics System"
+			"\n"	"[ ] " "Interaction PC to Dummy Object : Attack"
+		};
+
 		const char* const String4Road2Version_0_0_0 = {
 			"### Road 2 Version 0.0.0 ###"
 			"\n"
