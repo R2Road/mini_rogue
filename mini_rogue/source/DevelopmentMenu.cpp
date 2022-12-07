@@ -68,7 +68,7 @@ r2cm::MenuUp DevelopmentMenu::Create( r2cm::Director& director )
 		ret->AddItem(
 			32
 			, r2cm::eColor::BG_Blue
-			, []()->const char* { return "Time Timer"; }
+			, []()->const char* { return "MiniRogue"; }
 			, []()->r2cm::eItemLeaveAction
 			{
 				r2cm::WindowUtility::Resize( 548, 548 );
