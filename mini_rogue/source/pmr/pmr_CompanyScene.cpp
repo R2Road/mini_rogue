@@ -2,19 +2,19 @@
 
 #include <conio.h>
 
-#include "r2bix/r2base_Director.h"
-#include "r2bix/r2component_LabelSComponent.h"
-#include "r2bix/r2component_TextureRenderComponent.h"
-#include "r2bix/r2node_LabelSNode.h"
+#include "r2bix/r2bix_Director.h"
+#include "r2bix/r2bix_component_LabelSComponent.h"
+#include "r2bix/r2bix_component_TextureRenderComponent.h"
+#include "r2bix/r2bix_node_LabelSNode.h"
 
 namespace pmr
 {
-	CompanyScene::CompanyScene( r2base::Director& director ) : r2node::SceneNode( director )
+	CompanyScene::CompanyScene( r2bix::Director& director ) : r2bix_node::SceneNode( director )
 	{}
 
-	r2node::SceneNodeUp CompanyScene::Create( r2base::Director& director )
+	r2bix_node::SceneNodeUp CompanyScene::Create( r2bix::Director& director )
 	{
-		r2node::SceneNodeUp ret( new ( std::nothrow ) CompanyScene( director ) );
+		r2bix_node::SceneNodeUp ret( new ( std::nothrow ) CompanyScene( director ) );
 		if( !ret || !ret->Init() )
 		{
 			ret.reset();
@@ -25,20 +25,20 @@ namespace pmr
 
 	bool CompanyScene::Init()
 	{
-		if( !r2base::Node::Init() )
+		if( !r2bix_node::Node::Init() )
 		{
 			return false;
 		}
 
 		{
-			auto node = AddChild<r2node::LabelSNode>();
+			auto node = AddChild<r2bix_node::LabelSNode>();
 
 			node->mTransformComponent->SetPosition(
 				mDirector.GetScreenBufferSize().GetWidth() * 0.5f
 				, mDirector.GetScreenBufferSize().GetHeight() * 0.5f
 			);
 
-			node->GetComponent<r2component::LabelSComponent>()->SetString( "Mini Rogue-Like" );
+			node->GetComponent<r2bix_component::LabelSComponent>()->SetString( "Mini Rogue-Like" );
 		}
 
 		return true;
@@ -54,6 +54,6 @@ namespace pmr
 			}
 		}
 
-		r2node::SceneNode::Update( delta_time );
+		r2bix_node::SceneNode::Update( delta_time );
 	}
 }

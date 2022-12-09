@@ -1,7 +1,7 @@
 #include "pmr_TextureTable.h"
 
-#include "r2bix/r2render_Texture.h"
-#include "r2bix/r2render_TextureFrame.h"
+#include "r2bix/r2bix_render_Texture.h"
+#include "r2bix/r2bix_render_TextureFrame.h"
 
 namespace pmr
 {
@@ -13,7 +13,7 @@ namespace pmr
 		}
 
 		{
-			auto result = mTextureContainer.emplace( "project_mini_rogue_image", TextureValueT( new ( std::nothrow ) r2render::Texture(
+			auto result = mTextureContainer.emplace( "project_mini_rogue_image", TextureValueT( new ( std::nothrow ) r2bix_render::Texture(
 				60,
 				//		"          1         2         3         4         5         6         7"
 				//		"01234567890123456789012345678901234567890123456789012345678901234567890"
@@ -36,7 +36,7 @@ namespace pmr
 			{
 				auto frame_result = mTextureFrameContainer.emplace(
 					"number_0"
-					, TextureFrameValueT( new ( std::nothrow ) r2render::TextureFrame( result.first->second.get() ) )
+					, TextureFrameValueT( new ( std::nothrow ) r2bix_render::TextureFrame( result.first->second.get() ) )
 				);
 				frame_result.first->second->SetVisibleRect( r2::RectInt( 1, 1, 6, 4 ) );
 			}

@@ -2,17 +2,17 @@
 
 #include <memory>
 
-#include "r2bix/r2node_SceneNode.h"
+#include "r2bix/r2bix_node_SceneNode.h"
 
 namespace pmr
 {
-	class CompanyScene : public r2node::SceneNode
+	class CompanyScene : public r2bix_node::SceneNode
 	{
 	private:
-		CompanyScene( r2base::Director& director );
+		CompanyScene( r2bix::Director& director );
 
 	public:
-		static r2node::SceneNodeUp Create( r2base::Director& director );
+		static r2bix_node::SceneNodeUp Create( r2bix::Director& director );
 
 	private:
 		bool Init() override;

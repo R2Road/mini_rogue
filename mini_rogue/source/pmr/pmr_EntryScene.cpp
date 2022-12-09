@@ -1,6 +1,6 @@
 #include "pmr_EntryScene.h"
 
-#include "r2bix/r2base_Director.h"
+#include "r2bix/r2bix_Director.h"
 
 #include "pmr_TextureTable.h"
 #include "pmr_TextureFrameAnimationTable.h"
@@ -9,17 +9,17 @@
 
 namespace pmr
 {
-	class EntrySceneComponent : public r2base::Component<EntrySceneComponent>
+	class EntrySceneComponent : public r2bix_component::Component<EntrySceneComponent>
 	{
 	public:
-		EntrySceneComponent( r2base::Node& owner_node ) : r2base::Component<EntrySceneComponent>( owner_node ) {}
+		EntrySceneComponent( r2bix_node::Node& owner_node ) : r2bix_component::Component<EntrySceneComponent>( owner_node ) {}
 
 		//
 		//
 		//
 		void Update( const float delta_time ) override
 		{
-			r2base::iComponent::Update( delta_time );
+			r2bix_component::iComponent::Update( delta_time );
 
 			//
 			// Table Load
@@ -39,9 +39,9 @@ namespace pmr
 		}
 	};
 
-	r2node::SceneNodeUp EntryScene::Create( r2base::Director& director )
+	r2bix_node::SceneNodeUp EntryScene::Create( r2bix::Director& director )
 	{
-		auto ret( r2node::SceneNode::Create( director ) );
+		auto ret( r2bix_node::SceneNode::Create( director ) );
 		if( ret )
 		{
 			ret->AddComponent<EntrySceneComponent>();

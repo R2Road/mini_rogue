@@ -61,7 +61,7 @@ int main()
 	//
 	// Setup
 	//
-	r2base::Director director( pmr::DirectorConfig );
+	r2bix::Director director( pmr::DirectorConfig );
 	director.Setup( pmr::EntryScene::Create( director ) );
 
 	//

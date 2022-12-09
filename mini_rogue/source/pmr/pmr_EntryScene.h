@@ -1,15 +1,15 @@
 #pragma once
 
-#include "r2bix/r2node_SceneNode.h"
+#include "r2bix/r2bix_node_SceneNode.h"
 
 namespace pmr
 {
-	class EntryScene : public r2node::SceneNode
+	class EntryScene : public r2bix_node::SceneNode
 	{
 	private:
 		EntryScene() = delete;
 
 	public:
-		static r2node::SceneNodeUp Create( r2base::Director& director );
+		static r2bix_node::SceneNodeUp Create( r2bix::Director& director );
 	};
 }

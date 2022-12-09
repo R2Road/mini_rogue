@@ -13,16 +13,16 @@ namespace pmr
 			return;
 		}
 
-		r2base::TextureFrameAnimationInfo::Animation animation;
-		r2base::TextureFrameAnimationInfo::AnimationPackageT animation_package;
+		r2bix_table::TextureFrameAnimationInfo::Animation animation;
+		r2bix_table::TextureFrameAnimationInfo::AnimationPackageT animation_package;
 
 		//
 		// Number
 		//
 		{
 			{
-				animation.Index = r2animation::eIndex::Idle_1;
-				animation.Container.push_back( r2base::TextureFrameAnimationInfo::AnimationFrame{ 0.f, TextureTable::GetInstance().GetTextureFrame( "number_1" ) } );
+				animation.Index = r2bix_animation::eIndex::Idle_1;
+				animation.Container.push_back( r2bix_table::TextureFrameAnimationInfo::AnimationFrame{ 0.f, TextureTable::GetInstance().GetTextureFrame( "number_1" ) } );
 				animation_package.push_back( std::move( animation ) );
 			}
 
