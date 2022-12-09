@@ -242,6 +242,15 @@
     <ClCompile Include="external\r2cm\r2cm_WindowUtility.cpp">
       <Filter>external\r2cm</Filter>
     </ClCompile>
+    <ClCompile Include="source\pmr\pmr_Stage.cpp">
+      <Filter>project_mini_rogue</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test\item\test_pmr_stage.cpp">
+      <Filter>test\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pmr\pmr_Stage.cpp">
+      <Filter>project_mini_rogue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -556,6 +565,15 @@
     </ClInclude>
     <ClInclude Include="external\r2\r2_SingletonWithStaticVariable.h">
       <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pmr\pmr_Stage.h">
+      <Filter>project_mini_rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\item\test_pmr_stage.h">
+      <Filter>test\item</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pmr\pmr_Stage.h">
+      <Filter>project_mini_rogue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
