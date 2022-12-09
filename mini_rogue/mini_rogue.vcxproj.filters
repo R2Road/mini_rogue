@@ -53,9 +53,6 @@
     <ClCompile Include="external\r2\r2_FPSTimer.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
-    <ClCompile Include="external\r2\r2_GridIndexConverter.cpp">
-      <Filter>external\r2</Filter>
-    </ClCompile>
     <ClCompile Include="external\r2\r2_IndexEnumerator.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
@@ -251,6 +248,9 @@
     <ClCompile Include="external\r2\r2utility_StringDecomposition.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
+    <ClCompile Include="external\r2\r2_GridIndexConverter.cpp">
+      <Filter>external\r2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -290,9 +290,6 @@
     <ClInclude Include="external\r2\r2_FPSTimer.h">
       <Filter>external\r2</Filter>
     </ClInclude>
-    <ClInclude Include="external\r2\r2_GridIndexConverter.h">
-      <Filter>external\r2</Filter>
-    </ClInclude>
     <ClInclude Include="external\r2\r2_IndexEnumerator.h">
       <Filter>external\r2</Filter>
     </ClInclude>
@@ -321,9 +318,6 @@
       <Filter>external\r2</Filter>
     </ClInclude>
     <ClInclude Include="external\r2\r2_Queue.h">
-      <Filter>external\r2</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2\r2_QueueBasedOnArray.h">
       <Filter>external\r2</Filter>
     </ClInclude>
     <ClInclude Include="external\r2\r2_Random.h">
@@ -573,6 +567,12 @@
       <Filter>external\r2</Filter>
     </ClInclude>
     <ClInclude Include="external\r2\r2utility_StringDecomposition.h">
+      <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_Grid.h">
+      <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_GridIndexConverter.h">
       <Filter>external\r2</Filter>
     </ClInclude>
   </ItemGroup>

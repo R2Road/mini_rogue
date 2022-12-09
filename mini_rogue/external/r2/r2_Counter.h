@@ -12,23 +12,23 @@ namespace r2
 	class Counter
 	{
 	public:
+		static_assert(
+			std::is_same<char, T>::value
+			|| std::is_same<unsigned char, T>::value
+			|| std::is_same<short, T>::value
+			|| std::is_same<unsigned short, T>::value
+			|| std::is_same<int, T>::value
+			|| std::is_same<unsigned int, T>::value
+			|| std::is_same<long long int, T>::value
+			|| std::is_same<unsigned long long int, T>::value
+			, "r2::Counter - Not Allowed Type"
+		);
+
 		using ValueT = T;
 		const ValueT ValueMAX = std::numeric_limits<ValueT>::max();
 
 		Counter( const ValueT limit ) : mAlive( true ), mLimit( limit ), mCount( static_cast<ValueT>( 0 ) )
-		{
-			static_assert(
-				std::is_same<char, ValueT>::value
-				|| std::is_same<unsigned char, ValueT>::value
-				|| std::is_same<short, ValueT>::value
-				|| std::is_same<unsigned short, ValueT>::value
-				|| std::is_same<int, ValueT>::value
-				|| std::is_same<unsigned int, ValueT>::value
-				|| std::is_same<long long int, ValueT>::value
-				|| std::is_same<unsigned long long int, ValueT>::value
-				, "r2r::Counter - Not Allowed Type"
-			);
-		}
+		{}
 
 		//
 		//
@@ -78,13 +78,13 @@ namespace r2
 				return false;
 			}
 
-			increaseCount( increase_amount );
+			increaseProcess( increase_amount );
 
 			return mAlive;
 		}
 
 	private:
-		inline void increaseCount( ValueT increase_amount )
+		inline void increaseProcess( ValueT increase_amount )
 		{
 			R2ASSERT( increase_amount <= ( ValueMAX - mCount ), "" );
 

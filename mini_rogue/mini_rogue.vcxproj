@@ -69,11 +69,11 @@
     <ClCompile Include="external\r2cm\r2cm_PrintFile.cpp" />
     <ClCompile Include="external\r2cm\r2cm_StopWatch.cpp" />
     <ClCompile Include="external\r2cm\r2cm_WindowUtility.cpp" />
+    <ClCompile Include="external\r2\r2_GridIndexConverter.cpp" />
     <ClCompile Include="external\r2\r2utility_StringDecomposition.cpp" />
     <ClCompile Include="external\r2\r2utility_StringSize.cpp" />
     <ClCompile Include="external\r2\r2_Direction4.cpp" />
     <ClCompile Include="external\r2\r2_FPSTimer.cpp" />
-    <ClCompile Include="external\r2\r2_GridIndexConverter.cpp" />
     <ClCompile Include="external\r2\r2_IndexEnumerator.cpp" />
     <ClCompile Include="external\r2\r2_Log.cpp" />
     <ClCompile Include="external\r2\r2_PointFloat.cpp" />
@@ -156,13 +156,14 @@
     <ClInclude Include="external\r2cm\r2cm_StopWatch.h" />
     <ClInclude Include="external\r2cm\r2cm_VersionInfo.h" />
     <ClInclude Include="external\r2cm\r2cm_WindowUtility.h" />
+    <ClInclude Include="external\r2\r2_GridIndexConverter.h" />
     <ClInclude Include="external\r2\r2utility_StringDecomposition.h" />
     <ClInclude Include="external\r2\r2utility_StringSize.h" />
     <ClInclude Include="external\r2\r2_Assert.h" />
     <ClInclude Include="external\r2\r2_Counter.h" />
     <ClInclude Include="external\r2\r2_Direction4.h" />
     <ClInclude Include="external\r2\r2_FPSTimer.h" />
-    <ClInclude Include="external\r2\r2_GridIndexConverter.h" />
+    <ClInclude Include="external\r2\r2_Grid.h" />
     <ClInclude Include="external\r2\r2_IndexEnumerator.h" />
     <ClInclude Include="external\r2\r2_ListBasedOnArray.h" />
     <ClInclude Include="external\r2\r2_ListIterator.h" />
@@ -174,7 +175,6 @@
     <ClInclude Include="external\r2\r2_PointFloat.h" />
     <ClInclude Include="external\r2\r2_PointInt.h" />
     <ClInclude Include="external\r2\r2_Queue.h" />
-    <ClInclude Include="external\r2\r2_QueueBasedOnArray.h" />
     <ClInclude Include="external\r2\r2_Random.h" />
     <ClInclude Include="external\r2\r2_Rect.h" />
     <ClInclude Include="external\r2\r2_RectInt.h" />

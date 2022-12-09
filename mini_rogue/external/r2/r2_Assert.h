@@ -22,13 +22,24 @@
 #endif
 
 
+
+#define R2ASSERT_ENABLE_EXCEPTION 0
+
+#if defined( R2ASSERT_ENABLE_EXCEPTION ) && R2ASSERT_ENABLE_EXCEPTION == 1
+	#define R2ASSERT_EXCEPTION( message ) throw std::runtime_error( message )
+#else
+	#define R2ASSERT_EXCEPTION( message ) do {} while ( 0 )
+#endif
+
+
+
 #define	R2ASSERT( condition, message )																\
 do {																								\
 	if( !( condition ) )																			\
 	{																								\
 		printf( "[R2ASSERT]" "\n" "Condition : %s" "\n" "Message : %s" "\n", #condition, message );	\
 		R2ASSERT_DEBUG_BREAK;																		\
-		/*throw std::runtime_error( message );*/													\
+		R2ASSERT_EXCEPTION( message );																\
 	}																								\
 																									\
 	R2ASSERT_ASSERTION( condition );																\
