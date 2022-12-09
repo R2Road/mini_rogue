@@ -21,7 +21,13 @@ namespace test_pmr_stage
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( pmr::Stage s );
+				DECLARATION_MAIN( const pmr::Stage s( 2, 2 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 2, s.GetRoom().GetWidth() );
+				EXPECT_EQ( 2, s.GetRoom().GetHeight() );
+				EXPECT_EQ( 4, s.GetRoom().GetSize() );
 			}
 
 			std::cout << r2cm::split;
