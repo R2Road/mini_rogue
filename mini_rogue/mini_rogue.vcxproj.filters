@@ -251,6 +251,12 @@
     <ClCompile Include="external\r2\r2_GridIndexConverter.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
+    <ClCompile Include="source\test\item\test_pmr_room.cpp">
+      <Filter>test\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pmr\pmr_Room.cpp">
+      <Filter>test\item</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -574,6 +580,12 @@
     </ClInclude>
     <ClInclude Include="external\r2\r2_GridIndexConverter.h">
       <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\item\test_pmr_room.h">
+      <Filter>test\item</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pmr\pmr_Room.h">
+      <Filter>test\item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

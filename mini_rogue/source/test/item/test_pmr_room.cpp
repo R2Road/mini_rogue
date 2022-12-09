@@ -1,17 +1,17 @@
-#include "test_pmr_stage.h"
+#include "test_pmr_room.h"
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
 
-#include "pmr/pmr_Stage.h"
+#include "pmr/pmr_Room.h"
 
-namespace test_pmr_stage
+namespace test_pmr_room
 {
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Stage : Declaration";
+			return "Room : Declaration";
 		};
 	}
 	r2cm::iItem::DoFunctionT Declaration::GetDoFunction() const
@@ -21,7 +21,13 @@ namespace test_pmr_stage
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( const pmr::Stage s( 2, 2 ) );
+				DECLARATION_MAIN( const pmr::Room r( 2, 2, 0 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 2, r.GetWidth() );
+				EXPECT_EQ( 2, r.GetHeight() );
+				EXPECT_EQ( 4, r.GetSize() );
 			}
 
 			std::cout << r2cm::split;
