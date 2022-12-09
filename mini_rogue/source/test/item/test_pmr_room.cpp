@@ -35,4 +35,41 @@ namespace test_pmr_room
 			return r2cm::eItemLeaveAction::Pause;
 		};
 	}
+
+
+
+	r2cm::iItem::TitleFunctionT Builder::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Room : Builder";
+		};
+	}
+	r2cm::iItem::DoFunctionT Builder::GetDoFunction() const
+	{
+		return []()->r2cm::eItemLeaveAction
+		{
+			std::cout << r2cm::split;
+
+			{
+				DECLARATION_MAIN( pmr::Room r( 10, 10, 0 ) );
+				PROCESS_MAIN( pmr::RoomBuilder( &r ) );
+
+				std::cout << r2cm::linefeed;
+
+				for( int y = 0; r.GetHeight() > y; ++y )
+				{
+					for( int x = 0; r.GetWidth() > x; ++x )
+					{
+						std::cout << r.Get( x, y ) << " ";
+					}
+					std::cout << r2cm::linefeed;
+				}
+			}
+
+			std::cout << r2cm::split;
+
+			return r2cm::eItemLeaveAction::Pause;
+		};
+	}
 }
