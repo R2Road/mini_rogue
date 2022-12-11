@@ -15,18 +15,27 @@ namespace pmr
 		const char VersionNumber_1 = '0';
 		const char VersionNumber_2 = '0';
 		const char VersionNumber_3 = '0';
+		const char VersionNumber_4 = '0';
 
-		const char String4Version[19] = { 'M', 'i', 'n', 'i', 'R', 'o', 'g', 'u', 'e', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '\0' };
+		const char String4Version[21] = { 'M', 'i', 'n', 'i', 'R', 'o', 'g', 'u', 'e', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '.', VersionNumber_4, '\0' };
 
 
 		const char* const String4Road2Version_0_0_1 = {
-					"### Game 구성 : 가장 단순한 방식으로 만든다 ###"
+					"### Version Rule ###"
+			"\n"
+			"\n"	"> " "1.0.0.0" "\t" " : "	"출시"
+			"\n"	"> " "0.1.0.0" "\t" " : "	"10개의 Road 마다 1씩 증가"
+			"\n"	"> " "0.0.1.0" "\t" " : "	"Road 를 완주했다."
+			"\n"	"> " "0.0.0.1" "\t" " : "	"자잘한 수정이 있었다."
+			"\n"
+			"\n"
+			"\n"	"### Game 구성 : 가장 단순한 방식으로 만든다 ###"
 			"\n"
 			"\n"	"> " "Stage" "\t" " : "	"같은 크기 방들( 1개 ~ N개 )"
 			"\n"	"> " "Turn"	 "\t" " : "	"각 액터가 돌아가면서 1회씩 수행"
 			"\n"
 			"\n"
-			"\n"	"### Road 2 Version 0.0.1 ###"
+			"\n"	"### Road 2 Version 0.0.1.0 ###"
 			"\n"
 			"\n"	"[o] " "Make Empty Room : 10 x 10, 방을 둘러싼 벽"
 			"\n"	"[o] " "Make PC"
