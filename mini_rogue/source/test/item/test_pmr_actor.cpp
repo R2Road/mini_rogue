@@ -21,7 +21,9 @@ namespace test_pmr_actor
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( const pmr::Actor act );
+				DECLARATION_MAIN( const pmr::Actor act( 1, 2 ) );
+				EXPECT_EQ( 1, act.GetPoint().GetX() );
+				EXPECT_EQ( 2, act.GetPoint().GetY() );
 			}
 
 			std::cout << r2cm::split;

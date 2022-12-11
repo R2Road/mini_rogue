@@ -95,7 +95,7 @@ namespace test_pmr_room
 
 				std::cout << r2cm::linefeed;
 
-				DECLARATION_MAIN( pmr::Actor act );
+				DECLARATION_MAIN( pmr::Actor act( 3, 3 ) );
 				PROCESS_MAIN( r.AddActor( &act ) );
 
 				std::cout << r2cm::linefeed;
