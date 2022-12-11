@@ -28,7 +28,7 @@ namespace pmr
 			"\n"
 			"\n"	"### Road 2 Version 0.0.1 ###"
 			"\n"
-			"\n"	"[ ] " "Make Empty Stage : 방 1개, 10 x 10, 방을 둘러싼 벽"
+			"\n"	"[ ] " "Make Empty Room : 10 x 10, 방을 둘러싼 벽"
 			"\n"	"[ ] " "Make PC"
 			"\n"	"[ ] " "Move PC"
 			"\n"	"[ ] " "Make Dummy Object"
