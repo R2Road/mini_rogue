@@ -13,6 +13,18 @@ namespace test_pmr_room
 		return o << static_cast<int>( t );
 	}
 
+	void PrintRoom( const pmr::Room& r )
+	{
+		for( int y = 0; r.GetHeight() > y; ++y )
+		{
+			for( int x = 0; r.GetWidth() > x; ++x )
+			{
+				std::cout << r.Get( x, y ) << " ";
+			}
+			std::cout << r2cm::linefeed;
+		}
+	}
+
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
@@ -145,14 +157,7 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				for( int y = 0; r.GetHeight() > y; ++y )
-				{
-					for( int x = 0; r.GetWidth() > x; ++x )
-					{
-						std::cout << r.Get( x, y ) << " ";
-					}
-					std::cout << r2cm::linefeed;
-				}
+				PrintRoom( r );
 			}
 
 			std::cout << r2cm::split;
