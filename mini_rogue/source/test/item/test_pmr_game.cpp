@@ -1,17 +1,17 @@
-#include "test_pmr_stage.h"
+#include "test_pmr_game.h"
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
 
-#include "pmr/pmr_Stage.h"
+#include "pmr/pmr_Game.h"
 
-namespace test_pmr_stage
+namespace test_pmr_game
 {
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Stage : Declaration";
+			return "Game : Declaration";
 		};
 	}
 	r2cm::iItem::DoFunctionT Declaration::GetDoFunction() const
@@ -21,7 +21,7 @@ namespace test_pmr_stage
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( const pmr::Stage s( 2, 2 ) );
+				DECLARATION_MAIN( const pmr::Game s( 2, 2 ) );
 			}
 
 			std::cout << r2cm::split;

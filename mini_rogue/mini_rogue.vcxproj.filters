@@ -104,12 +104,6 @@
     <ClCompile Include="source\pmr\pmr_Stage.cpp">
       <Filter>project_mini_rogue</Filter>
     </ClCompile>
-    <ClCompile Include="source\test\item\test_pmr_stage.cpp">
-      <Filter>test\item</Filter>
-    </ClCompile>
-    <ClCompile Include="source\pmr\pmr_Stage.cpp">
-      <Filter>project_mini_rogue</Filter>
-    </ClCompile>
     <ClCompile Include="external\r2bix\r2bix_action_AnimationRequestAction.cpp">
       <Filter>external\r2bix</Filter>
     </ClCompile>
@@ -255,6 +249,12 @@
       <Filter>test\item</Filter>
     </ClCompile>
     <ClCompile Include="source\pmr\pmr_Room.cpp">
+      <Filter>test\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pmr\pmr_Game.cpp">
+      <Filter>project_mini_rogue</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test\item\test_pmr_game.cpp">
       <Filter>test\item</Filter>
     </ClCompile>
   </ItemGroup>
@@ -406,12 +406,6 @@
     </ClInclude>
     <ClInclude Include="external\r2\r2_SingletonWithStaticVariable.h">
       <Filter>external\r2</Filter>
-    </ClInclude>
-    <ClInclude Include="source\pmr\pmr_Stage.h">
-      <Filter>project_mini_rogue</Filter>
-    </ClInclude>
-    <ClInclude Include="source\test\item\test_pmr_stage.h">
-      <Filter>test\item</Filter>
     </ClInclude>
     <ClInclude Include="source\pmr\pmr_Stage.h">
       <Filter>project_mini_rogue</Filter>
@@ -585,6 +579,12 @@
       <Filter>test\item</Filter>
     </ClInclude>
     <ClInclude Include="source\pmr\pmr_Room.h">
+      <Filter>test\item</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pmr\pmr_Game.h">
+      <Filter>project_mini_rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\item\test_pmr_game.h">
       <Filter>test\item</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,10 +4,10 @@
 
 namespace pmr
 {
-	class Stage
+	class Game
 	{
 	public:
-		Stage( const uint32_t room_width, const uint32_t room_height );
+		Game( const uint32_t room_width, const uint32_t room_height );
 
 		const Room& GetRoom() const
 		{
