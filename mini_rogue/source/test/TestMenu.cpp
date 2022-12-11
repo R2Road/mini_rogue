@@ -3,6 +3,7 @@
 #include "r2cm/r2cm_Director.h"
 #include "r2cm/r2cm_ostream.h"
 
+#include "item/test_pmr_actor.h"
 #include "item/test_pmr_game.h"
 #include "item/test_pmr_room.h"
 
@@ -14,8 +15,16 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 	) );
 
 	{
-		ret->AddItem( '1', test_pmr_room::Declaration() );
-		ret->AddItem( '2', test_pmr_room::Builder() );
+		ret->AddItem( '1', test_pmr_actor::Declaration() );
+
+
+
+		ret->AddLineFeed();
+
+
+
+		ret->AddItem( '5', test_pmr_room::Declaration() );
+		ret->AddItem( '6', test_pmr_room::Builder() );
 
 
 
