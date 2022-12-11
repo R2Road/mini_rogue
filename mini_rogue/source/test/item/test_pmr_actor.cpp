@@ -22,8 +22,16 @@ namespace test_pmr_actor
 
 			{
 				DECLARATION_MAIN( const pmr::Actor act( 1, 2 ) );
+
+				std::cout << r2cm::linefeed;
+
 				EXPECT_EQ( 1, act.GetPoint().GetX() );
 				EXPECT_EQ( 2, act.GetPoint().GetY() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( act.GetPoint().GetX(), act.GetX() );
+				EXPECT_EQ( act.GetPoint().GetY(), act.GetY() );
 			}
 
 			std::cout << r2cm::split;

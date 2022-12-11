@@ -7,6 +7,8 @@ namespace pmr
 	class Actor
 	{
 	public:
+		using Point = r2::PointUint;
+
 		Actor( const uint32_t x, const uint32_t y );
 
 		//
@@ -15,6 +17,14 @@ namespace pmr
 		const r2::PointUint& GetPoint() const
 		{
 			return mPoint;
+		}
+		Point::ValueT GetX() const
+		{
+			return mPoint.GetX();
+		}
+		Point::ValueT GetY() const
+		{
+			return mPoint.GetY();
 		}
 
 	private:
