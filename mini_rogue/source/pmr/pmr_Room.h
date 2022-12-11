@@ -48,6 +48,10 @@ namespace pmr
 		//
 		// Actor
 		//
+		const ActorContainer& GetActorContainer() const
+		{
+			return mActorContainer;
+		}
 		bool AddActor( Actor* const actor );
 
 	private:

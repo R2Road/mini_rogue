@@ -2,6 +2,7 @@
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
+#include "r2cm/r2cm_WindowUtility.h"
 
 #include "pmr/pmr_Actor.h"
 #include "pmr/pmr_Room.h"
@@ -15,6 +16,8 @@ namespace test_pmr_room
 
 	void PrintRoom( const pmr::Room& r )
 	{
+		const auto pivot = r2cm::WindowUtility::GetCursorPoint();
+
 		for( int y = 0; r.GetHeight() > y; ++y )
 		{
 			for( int x = 0; r.GetWidth() > x; ++x )
@@ -23,6 +26,14 @@ namespace test_pmr_room
 			}
 			std::cout << r2cm::linefeed;
 		}
+
+		for( const auto& a : r.GetActorContainer() )
+		{
+			r2cm::WindowUtility::MoveCursorPoint( { ( pivot.x + (short)a->GetX() ) * 2, pivot.y + (short)a->GetY() } );
+			std::cout << r2cm::clm( r2cm::eColor::BG_Blue ) << r2cm::clm( r2cm::eColor::FG_Yellow ) << "A" << r2cm::clm();
+		}
+
+		r2cm::WindowUtility::MoveCursorPoint( { 0, pivot.y + (short)r.GetHeight() } );
 	}
 
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
