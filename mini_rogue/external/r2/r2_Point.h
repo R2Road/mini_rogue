@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <stdint.h>
 
 namespace r2
 {
@@ -10,7 +11,8 @@ namespace r2
 	{
 	public:
 		static_assert(
-			std::is_same<int, T>::value
+			std::is_same<int32_t, T>::value
+			|| std::is_same<uint32_t, T>::value
 			|| std::is_same<float, T>::value
 			, "r2r::Point - Not Allowed Type"
 		);

@@ -79,6 +79,7 @@
     <ClCompile Include="external\r2\r2_Log.cpp" />
     <ClCompile Include="external\r2\r2_PointFloat.cpp" />
     <ClCompile Include="external\r2\r2_PointInt.cpp" />
+    <ClCompile Include="external\r2\r2_PointUint.cpp" />
     <ClCompile Include="external\r2\r2_Random.cpp" />
     <ClCompile Include="external\r2\r2_RectInt.cpp" />
     <ClCompile Include="external\r2\r2_RectTestUtility.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="external\r2\r2_Point.h" />
     <ClInclude Include="external\r2\r2_PointFloat.h" />
     <ClInclude Include="external\r2\r2_PointInt.h" />
+    <ClInclude Include="external\r2\r2_PointUint.h" />
     <ClInclude Include="external\r2\r2_Queue.h" />
     <ClInclude Include="external\r2\r2_Random.h" />
     <ClInclude Include="external\r2\r2_Rect.h" />

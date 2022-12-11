@@ -266,6 +266,9 @@
     <ClCompile Include="external\r2\r2_Direction4State.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
+    <ClCompile Include="external\r2\r2_PointUint.cpp">
+      <Filter>external\r2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -603,6 +606,9 @@
       <Filter>project_mini_rogue</Filter>
     </ClInclude>
     <ClInclude Include="external\r2\r2_Direction4State.h">
+      <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_PointUint.h">
       <Filter>external\r2</Filter>
     </ClInclude>
   </ItemGroup>
