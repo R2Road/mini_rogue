@@ -4,7 +4,10 @@
 
 namespace pmr
 {
-	using Tile = int;
+	using Tile = enum class Tile {
+		Empty,
+		Wall,
+	};
 
 	class Room
 	{

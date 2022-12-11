@@ -6,7 +6,7 @@
 namespace pmr
 {
 	Room::Room( const uint32_t width, const uint32_t height ) :
-		mGrid( width, height, 0 )
+		mGrid( width, height, Tile::Empty )
 		, mActorContainer()
 	{}
 
@@ -40,11 +40,11 @@ namespace pmr
 			{
 				if( rect.ContainsPoint( x, y ) )
 				{
-					out_room->Set( x, y, 0 );
+					out_room->Set( x, y, Tile::Empty );
 				}
 				else
 				{
-					out_room->Set( x, y, 1 );
+					out_room->Set( x, y, Tile::Wall );
 				}
 			}
 		}

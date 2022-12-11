@@ -8,6 +8,11 @@
 
 namespace test_pmr_room
 {
+	std::ostream& operator<<( std::ostream& o, pmr::Tile t )
+	{
+		return o << static_cast<int>( t );
+	}
+
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
