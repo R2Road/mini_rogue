@@ -10,7 +10,7 @@ namespace pmr
 
 	void RoomBuilder( Room* out_room )
 	{
-		const r2::RectInt rect( 1, 1, out_room->GetWidth() - 3, out_room->GetHeight() - 3 );
+		const r2::RectInt rect( 1, 1, static_cast<int>( out_room->GetWidth() ) - 3, static_cast<int>( out_room->GetHeight() ) - 3 );
 
 		for( int y = 0; out_room->GetHeight() > y; ++y )
 		{
