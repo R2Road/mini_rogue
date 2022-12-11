@@ -21,7 +21,7 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( const pmr::Room r( 2, 2, 0 ) );
+				DECLARATION_MAIN( const pmr::Room r( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
@@ -52,7 +52,7 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( pmr::Room r( 10, 10, 0 ) );
+				DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
 				PROCESS_MAIN( pmr::RoomBuilder( &r ) );
 
 				std::cout << r2cm::linefeed;

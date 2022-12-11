@@ -4,6 +4,10 @@
 
 namespace pmr
 {
+	Room::Room( const uint32_t width, const uint32_t height ) :
+		mGrid( width, height, 0 )
+	{}
+
 	void RoomBuilder( Room* out_room )
 	{
 		const r2::RectInt rect( 1, 1, out_room->GetWidth() - 3, out_room->GetHeight() - 3 );
