@@ -263,6 +263,9 @@
     <ClCompile Include="source\pmr\pmr_Actor.cpp">
       <Filter>project_mini_rogue</Filter>
     </ClCompile>
+    <ClCompile Include="external\r2\r2_Direction4State.cpp">
+      <Filter>external\r2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -598,6 +601,9 @@
     </ClInclude>
     <ClInclude Include="source\pmr\pmr_Actor.h">
       <Filter>project_mini_rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_Direction4State.h">
+      <Filter>external\r2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
