@@ -12,11 +12,25 @@ namespace pmr
 
 	bool Room::AddActor( Actor* const actor )
 	{
+		//
+		// 범위 확인
+		//
 		if( !mGrid.IsIn( actor->GetX(), actor->GetY() ) )
 		{
 			return false;
 		}
 
+		//
+		// Tile 확인
+		//
+		if( Tile::Wall == mGrid.Get( actor->GetX(), actor->GetY() ) )
+		{
+			return false;
+		}
+
+		//
+		// 겹치는 Actor 확인
+		//
 		for( const auto a : mActorContainer )
 		{
 			if( a->GetPoint() == actor->GetPoint() )
