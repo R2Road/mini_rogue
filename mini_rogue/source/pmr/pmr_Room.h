@@ -10,6 +10,7 @@ namespace pmr
 	{
 	public:
 		using Grid = r2::Grid<Tile>;
+		using ActorContainer = std::vector<class Actor*>;
 
 		Room( const uint32_t width, const uint32_t height );
 
@@ -41,8 +42,14 @@ namespace pmr
 			mGrid.Set( x, y, new_value );
 		}
 
+		//
+		// Actor
+		//
+		void AddActor( Actor* const actor );
+
 	private:
 		Grid mGrid;
+		ActorContainer mActorContainer;
 	};
 
 	void RoomBuilder( Room* out_room );

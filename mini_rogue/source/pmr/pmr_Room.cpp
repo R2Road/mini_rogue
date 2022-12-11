@@ -6,7 +6,13 @@ namespace pmr
 {
 	Room::Room( const uint32_t width, const uint32_t height ) :
 		mGrid( width, height, 0 )
+		, mActorContainer()
 	{}
+
+	void Room::AddActor( Actor* const actor )
+	{
+		mActorContainer.push_back( actor );
+	}
 
 	void RoomBuilder( Room* out_room )
 	{
