@@ -89,14 +89,14 @@ namespace test_pmr_room
 		{
 			std::cout << r2cm::split;
 
+			DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
+			PROCESS_MAIN( pmr::RoomBuilder( &r ) );
+
+			std::cout << r2cm::split;
+
 			{
-				DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
-				PROCESS_MAIN( pmr::RoomBuilder( &r ) );
-
-				std::cout << r2cm::linefeed;
-
 				DECLARATION_MAIN( pmr::Actor act( 3, 3 ) );
-				PROCESS_MAIN( r.AddActor( &act ) );
+				EXPECT_TRUE( r.AddActor( &act ) );
 
 				std::cout << r2cm::linefeed;
 

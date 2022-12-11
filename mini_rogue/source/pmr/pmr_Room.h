@@ -45,7 +45,7 @@ namespace pmr
 		//
 		// Actor
 		//
-		void AddActor( Actor* const actor );
+		bool AddActor( Actor* const actor );
 
 	private:
 		Grid mGrid;

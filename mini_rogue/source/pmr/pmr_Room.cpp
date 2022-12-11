@@ -1,5 +1,6 @@
 #include "pmr_Room.h"
 
+#include "pmr_Actor.h"
 #include "r2/r2_RectInt.h"
 
 namespace pmr
@@ -9,9 +10,16 @@ namespace pmr
 		, mActorContainer()
 	{}
 
-	void Room::AddActor( Actor* const actor )
+	bool Room::AddActor( Actor* const actor )
 	{
+		if( !mGrid.IsIn( actor->GetX(), actor->GetY() ) )
+		{
+			return false;
+		}
+
 		mActorContainer.push_back( actor );
+
+		return true;
 	}
 
 	void RoomBuilder( Room* out_room )
