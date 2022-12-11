@@ -17,6 +17,14 @@ namespace pmr
 			return false;
 		}
 
+		for( const auto a : mActorContainer )
+		{
+			if( a->GetPoint() == actor->GetPoint() )
+			{
+				return false;
+			}
+		}
+
 		mActorContainer.push_back( actor );
 
 		return true;

@@ -95,8 +95,13 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( pmr::Actor act( 3, 3 ) );
-				EXPECT_TRUE( r.AddActor( &act ) );
+				DECLARATION_MAIN( pmr::Actor a_1( 3, 3 ) );
+				EXPECT_TRUE( r.AddActor( &a_1 ) );
+
+				std::cout << r2cm::linefeed;
+
+				DECLARATION_MAIN( pmr::Actor a_2( 3, 3 ) );
+				EXPECT_FALSE( r.AddActor( &a_2 ) );
 
 				std::cout << r2cm::linefeed;
 
