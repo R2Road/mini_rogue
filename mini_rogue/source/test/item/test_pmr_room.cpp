@@ -105,6 +105,11 @@ namespace test_pmr_room
 
 				std::cout << r2cm::linefeed;
 
+				DECLARATION_MAIN( pmr::Actor a_3( static_cast<pmr::Actor::Point::ValueT>( r.GetWidth() ), static_cast<pmr::Actor::Point::ValueT>( r.GetHeight() ) ) );
+				EXPECT_FALSE( r.AddActor( &a_3 ) );
+
+				std::cout << r2cm::linefeed;
+
 				for( int y = 0; r.GetHeight() > y; ++y )
 				{
 					for( int x = 0; r.GetWidth() > x; ++x )
