@@ -248,14 +248,14 @@
     <ClCompile Include="source\test\item\test_pmr_room.cpp">
       <Filter>test\item</Filter>
     </ClCompile>
-    <ClCompile Include="source\pmr\pmr_Room.cpp">
-      <Filter>test\item</Filter>
-    </ClCompile>
     <ClCompile Include="source\pmr\pmr_Game.cpp">
       <Filter>project_mini_rogue</Filter>
     </ClCompile>
     <ClCompile Include="source\test\item\test_pmr_game.cpp">
       <Filter>test\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pmr\pmr_Room.cpp">
+      <Filter>project_mini_rogue</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -578,14 +578,14 @@
     <ClInclude Include="source\test\item\test_pmr_room.h">
       <Filter>test\item</Filter>
     </ClInclude>
-    <ClInclude Include="source\pmr\pmr_Room.h">
-      <Filter>test\item</Filter>
-    </ClInclude>
     <ClInclude Include="source\pmr\pmr_Game.h">
       <Filter>project_mini_rogue</Filter>
     </ClInclude>
     <ClInclude Include="source\test\item\test_pmr_game.h">
       <Filter>test\item</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pmr\pmr_Room.h">
+      <Filter>project_mini_rogue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
