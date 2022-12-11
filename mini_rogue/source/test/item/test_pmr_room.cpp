@@ -100,26 +100,51 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
+				OUTPUT_NOTE( "기본" );
+
+				std::cout << r2cm::linefeed;
+
 				DECLARATION_MAIN( pmr::Actor a_1( 3, 3 ) );
 				EXPECT_TRUE( r.AddActor( &a_1 ) );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				OUTPUT_NOTE( "겹쳐지나?" );
 
 				std::cout << r2cm::linefeed;
 
 				DECLARATION_MAIN( pmr::Actor a_2( 3, 3 ) );
 				EXPECT_FALSE( r.AddActor( &a_2 ) );
 
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				OUTPUT_NOTE( "범위 확인" );
+
 				std::cout << r2cm::linefeed;
 
 				DECLARATION_MAIN( pmr::Actor a_3( static_cast<pmr::Actor::Point::ValueT>( r.GetWidth() ), static_cast<pmr::Actor::Point::ValueT>( r.GetHeight() ) ) );
 				EXPECT_FALSE( r.AddActor( &a_3 ) );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				OUTPUT_NOTE( "타일 확인" );
 
 				std::cout << r2cm::linefeed;
 
 				DECLARATION_MAIN( pmr::Actor a_4( 0, 0 ) );
 				EXPECT_FALSE( r.AddActor( &a_4 ) );
+			}
 
-				std::cout << r2cm::linefeed;
+			std::cout << r2cm::split;
 
+			{
 				for( int y = 0; r.GetHeight() > y; ++y )
 				{
 					for( int x = 0; r.GetWidth() > x; ++x )
