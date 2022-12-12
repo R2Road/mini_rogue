@@ -27,6 +27,26 @@ namespace pmr
 			return mPoint.GetY();
 		}
 
+		//
+		// Setter
+		//
+		void SetPoint( const r2::PointUint& point )
+		{
+			mPoint = point;
+		}
+		void SetPoint( const uint32_t x, const uint32_t y )
+		{
+			mPoint.Set( x, y );
+		}
+		void SetX( const uint32_t x )
+		{
+			mPoint.SetX( x );
+		}
+		void SetY( const uint32_t y )
+		{
+			mPoint.SetY( y );
+		}
+
 	private:
 		r2::PointUint mPoint;
 	};

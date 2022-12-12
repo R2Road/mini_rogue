@@ -10,4 +10,11 @@ namespace test_pmr_actor
 		TitleFunctionT GetTitleFunction() const override;
 		DoFunctionT GetDoFunction() const override;
 	};
+
+	class Point : public r2cm::iItem
+	{
+	public:
+		TitleFunctionT GetTitleFunction() const override;
+		DoFunctionT GetDoFunction() const override;
+	};
 }
