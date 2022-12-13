@@ -95,6 +95,7 @@
     <ClCompile Include="source\pmr\pmr_TextureFrameAnimationTable.cpp" />
     <ClCompile Include="source\pmr\pmr_TextureTable.cpp" />
     <ClCompile Include="source\test\item\test_pmr_actor.cpp" />
+    <ClCompile Include="source\test\item\test_pmr_demo.cpp" />
     <ClCompile Include="source\test\item\test_pmr_room.cpp" />
     <ClCompile Include="source\test\item\test_pmr_game.cpp" />
     <ClCompile Include="source\test\TestMenu.cpp" />
@@ -210,6 +211,7 @@
     <ClInclude Include="source\pmr\pmr_TextureTable.h" />
     <ClInclude Include="source\pmr\pmr_VersionInfo.h" />
     <ClInclude Include="source\test\item\test_pmr_actor.h" />
+    <ClInclude Include="source\test\item\test_pmr_demo.h" />
     <ClInclude Include="source\test\item\test_pmr_room.h" />
     <ClInclude Include="source\test\item\test_pmr_game.h" />
     <ClInclude Include="source\test\TestMenu.h" />
