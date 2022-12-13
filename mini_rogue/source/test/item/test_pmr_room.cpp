@@ -22,7 +22,7 @@ namespace test_pmr_room
 		{
 			for( int x = 0; r.GetWidth() > x; ++x )
 			{
-				std::cout << r.Get( x, y ) << " ";
+				std::cout << r.GetTile( x, y ) << " ";
 			}
 			std::cout << r2cm::linefeed;
 		}
@@ -90,7 +90,7 @@ namespace test_pmr_room
 				{
 					for( int x = 0; r.GetWidth() > x; ++x )
 					{
-						std::cout << r.Get( x, y ) << " ";
+						std::cout << r.GetTile( x, y ) << " ";
 					}
 					std::cout << r2cm::linefeed;
 				}

@@ -54,11 +54,11 @@ namespace pmr
 			{
 				if( rect.ContainsPoint( x, y ) )
 				{
-					out_room->Set( x, y, Tile::Empty );
+					out_room->SetTile( x, y, Tile::Empty );
 				}
 				else
 				{
-					out_room->Set( x, y, Tile::Wall );
+					out_room->SetTile( x, y, Tile::Wall );
 				}
 			}
 		}

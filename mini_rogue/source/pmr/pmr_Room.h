@@ -36,11 +36,11 @@ namespace pmr
 		//
 		// Terrain
 		//
-		const Terrain::CellT& Get( const std::size_t x, const std::size_t y ) const
+		const Terrain::CellT& GetTile( const std::size_t x, const std::size_t y ) const
 		{
 			return mTerrain.Get( x, y );
 		}
-		void Set( const std::size_t x, const std::size_t y, const Terrain::CellT& new_value )
+		void SetTile( const std::size_t x, const std::size_t y, const Terrain::CellT& new_value )
 		{
 			mTerrain.Set( x, y, new_value );
 		}
