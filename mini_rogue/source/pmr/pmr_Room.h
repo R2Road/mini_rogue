@@ -12,7 +12,7 @@ namespace pmr
 	class Room
 	{
 	public:
-		using Grid = r2::Grid<Tile>;
+		using Terrain = r2::Grid<Tile>;
 		using ActorContainer = std::vector<class Actor*>;
 
 		Room( const uint32_t width, const uint32_t height );
@@ -22,27 +22,27 @@ namespace pmr
 		//
 		std::size_t GetWidth() const
 		{
-			return mGrid.GetWidth();
+			return mTerrain.GetWidth();
 		}
 		std::size_t GetHeight() const
 		{
-			return mGrid.GetHeight();
+			return mTerrain.GetHeight();
 		}
 		std::size_t GetSize() const
 		{
-			return mGrid.GetSize();
+			return mTerrain.GetSize();
 		}
 
 		//
-		// Cell
+		// Terrain
 		//
-		const Grid::CellT& Get( const std::size_t x, const std::size_t y ) const
+		const Terrain::CellT& Get( const std::size_t x, const std::size_t y ) const
 		{
-			return mGrid.Get( x, y );
+			return mTerrain.Get( x, y );
 		}
-		void Set( const std::size_t x, const std::size_t y, const Grid::CellT& new_value )
+		void Set( const std::size_t x, const std::size_t y, const Terrain::CellT& new_value )
 		{
-			mGrid.Set( x, y, new_value );
+			mTerrain.Set( x, y, new_value );
 		}
 
 		//
@@ -55,7 +55,7 @@ namespace pmr
 		bool AddActor( Actor* const actor );
 
 	private:
-		Grid mGrid;
+		Terrain mTerrain;
 		ActorContainer mActorContainer;
 	};
 

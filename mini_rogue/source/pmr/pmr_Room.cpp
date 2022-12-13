@@ -6,7 +6,7 @@
 namespace pmr
 {
 	Room::Room( const uint32_t width, const uint32_t height ) :
-		mGrid( width, height, Tile::Empty )
+		mTerrain( width, height, Tile::Empty )
 		, mActorContainer()
 	{}
 
@@ -15,7 +15,7 @@ namespace pmr
 		//
 		// 범위 확인
 		//
-		if( !mGrid.IsIn( actor->GetX(), actor->GetY() ) )
+		if( !mTerrain.IsIn( actor->GetX(), actor->GetY() ) )
 		{
 			return false;
 		}
@@ -23,7 +23,7 @@ namespace pmr
 		//
 		// Tile 확인
 		//
-		if( Tile::Wall == mGrid.Get( actor->GetX(), actor->GetY() ) )
+		if( Tile::Wall == mTerrain.Get( actor->GetX(), actor->GetY() ) )
 		{
 			return false;
 		}
