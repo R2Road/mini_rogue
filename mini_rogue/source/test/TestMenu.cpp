@@ -28,6 +28,7 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 		ret->AddItem( '5', test_pmr_room::Declaration() );
 		ret->AddItem( '6', test_pmr_room::Builder() );
 		ret->AddItem( '7', test_pmr_room::Actor() );
+		ret->AddItem( '8', test_pmr_room::Demo() );
 
 
 

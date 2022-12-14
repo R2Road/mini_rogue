@@ -176,4 +176,44 @@ namespace test_pmr_room
 			return r2cm::eItemLeaveAction::Pause;
 		};
 	}
+
+
+
+	r2cm::iItem::TitleFunctionT Demo::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Room : Demo";
+		};
+	}
+	r2cm::iItem::DoFunctionT Demo::GetDoFunction() const
+	{
+		return []()->r2cm::eItemLeaveAction
+		{
+			std::cout << r2cm::split;
+
+			DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
+			PROCESS_MAIN( pmr::RoomBuilder( &r ) );
+
+			std::cout << r2cm::linefeed;
+
+			DECLARATION_MAIN( pmr::Actor a_1( 3, 3 ) );
+			EXPECT_TRUE( r.AddActor( &a_1 ) );
+
+			std::cout << r2cm::linefeed;
+
+			DECLARATION_MAIN( pmr::Actor a_2( 5, 5 ) );
+			EXPECT_TRUE( r.AddActor( &a_2 ) );
+
+			std::cout << r2cm::split;
+
+			{
+				PrintRoom( r );
+			}
+
+			std::cout << r2cm::split;
+
+			return r2cm::eItemLeaveAction::Pause;
+		};
+	}
 }
