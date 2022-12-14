@@ -1,6 +1,6 @@
 #pragma once
 
-#include "pmr_Room.h"
+#include "pmr_Zone.h"
 
 namespace pmr
 {
@@ -9,12 +9,12 @@ namespace pmr
 	public:
 		Game( const uint32_t room_width, const uint32_t room_height );
 
-		const Room& GetRoom() const
+		const Zone& GetRoom() const
 		{
-			return mRoom;
+			return mZone;
 		}
 
 	private:
-		Room mRoom;
+		Zone mZone;
 	};
 }

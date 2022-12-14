@@ -6,7 +6,7 @@
 #include "item/test_pmr_actor.h"
 #include "item/test_pmr_demo.h"
 #include "item/test_pmr_game.h"
-#include "item/test_pmr_room.h"
+#include "item/test_pmr_zone.h"
 
 r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 {
@@ -25,10 +25,10 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 
 
-		ret->AddItem( '5', test_pmr_room::Declaration() );
-		ret->AddItem( '6', test_pmr_room::Builder() );
-		ret->AddItem( '7', test_pmr_room::Actor() );
-		ret->AddItem( '8', test_pmr_room::Demo() );
+		ret->AddItem( '5', test_pmr_zone::Declaration() );
+		ret->AddItem( '6', test_pmr_zone::Builder() );
+		ret->AddItem( '7', test_pmr_zone::Actor() );
+		ret->AddItem( '8', test_pmr_zone::Demo() );
 
 
 

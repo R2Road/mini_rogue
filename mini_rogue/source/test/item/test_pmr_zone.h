@@ -2,7 +2,7 @@
 
 #include "r2cm/r2cm_iItem.h"
 
-namespace test_pmr_room
+namespace test_pmr_zone
 {
 	class Declaration : public r2cm::iItem
 	{

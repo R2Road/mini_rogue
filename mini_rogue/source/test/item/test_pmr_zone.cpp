@@ -1,4 +1,4 @@
-#include "test_pmr_room.h"
+#include "test_pmr_zone.h"
 
 #include <conio.h>
 
@@ -7,42 +7,42 @@
 #include "r2cm/r2cm_WindowUtility.h"
 
 #include "pmr/pmr_Actor.h"
-#include "pmr/pmr_Room.h"
+#include "pmr/pmr_Zone.h"
 
-namespace test_pmr_room
+namespace test_pmr_zone
 {
 	std::ostream& operator<<( std::ostream& o, pmr::Tile t )
 	{
 		return o << static_cast<int>( t );
 	}
 
-	void PrintRoom( const pmr::Room& r )
+	void PrintRoom( const pmr::Zone& z )
 	{
 		const auto pivot = r2cm::WindowUtility::GetCursorPoint();
 
-		for( int y = 0; r.GetHeight() > y; ++y )
+		for( int y = 0; z.GetHeight() > y; ++y )
 		{
-			for( int x = 0; r.GetWidth() > x; ++x )
+			for( int x = 0; z.GetWidth() > x; ++x )
 			{
-				std::cout << r.GetTile( x, y ) << " ";
+				std::cout << z.GetTile( x, y ) << " ";
 			}
 			std::cout << r2cm::linefeed;
 		}
 
-		for( const auto& a : r.GetActorContainer() )
+		for( const auto& a : z.GetActorContainer() )
 		{
 			r2cm::WindowUtility::MoveCursorPoint( { ( pivot.x + (short)a->GetX() ) * 2, pivot.y + (short)a->GetY() } );
 			std::cout << r2cm::clm( r2cm::eColor::BG_Blue ) << r2cm::clm( r2cm::eColor::FG_Yellow ) << "A" << r2cm::clm();
 		}
 
-		r2cm::WindowUtility::MoveCursorPoint( { 0, pivot.y + (short)r.GetHeight() } );
+		r2cm::WindowUtility::MoveCursorPoint( { 0, pivot.y + (short)z.GetHeight() } );
 	}
 
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Room : Declaration";
+			return "Zone : Declaration";
 		};
 	}
 	r2cm::iItem::DoFunctionT Declaration::GetDoFunction() const
@@ -52,13 +52,13 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( const pmr::Room r( 2, 2 ) );
+				DECLARATION_MAIN( const pmr::Zone z( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( 2, r.GetWidth() );
-				EXPECT_EQ( 2, r.GetHeight() );
-				EXPECT_EQ( 4, r.GetSize() );
+				EXPECT_EQ( 2, z.GetWidth() );
+				EXPECT_EQ( 2, z.GetHeight() );
+				EXPECT_EQ( 4, z.GetSize() );
 			}
 
 			std::cout << r2cm::split;
@@ -73,7 +73,7 @@ namespace test_pmr_room
 	{
 		return []()->const char*
 		{
-			return "Room : Builder";
+			return "Zone : Builder";
 		};
 	}
 	r2cm::iItem::DoFunctionT Builder::GetDoFunction() const
@@ -83,16 +83,16 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
-				PROCESS_MAIN( pmr::RoomBuilder( &r ) );
+				DECLARATION_MAIN( pmr::Zone z( 10, 10 ) );
+				PROCESS_MAIN( pmr::RoomBuilder( &z ) );
 
 				std::cout << r2cm::linefeed;
 
-				for( int y = 0; r.GetHeight() > y; ++y )
+				for( int y = 0; z.GetHeight() > y; ++y )
 				{
-					for( int x = 0; r.GetWidth() > x; ++x )
+					for( int x = 0; z.GetWidth() > x; ++x )
 					{
-						std::cout << r.GetTile( x, y ) << " ";
+						std::cout << z.GetTile( x, y ) << " ";
 					}
 					std::cout << r2cm::linefeed;
 				}
@@ -110,7 +110,7 @@ namespace test_pmr_room
 	{
 		return []()->const char*
 		{
-			return "Room : Actor";
+			return "Zone : Actor";
 		};
 	}
 	r2cm::iItem::DoFunctionT Actor::GetDoFunction() const
@@ -119,8 +119,8 @@ namespace test_pmr_room
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
-			PROCESS_MAIN( pmr::RoomBuilder( &r ) );
+			DECLARATION_MAIN( pmr::Zone z( 10, 10 ) );
+			PROCESS_MAIN( pmr::RoomBuilder( &z ) );
 
 			std::cout << r2cm::split;
 
@@ -130,7 +130,7 @@ namespace test_pmr_room
 				std::cout << r2cm::linefeed;
 
 				DECLARATION_MAIN( pmr::Actor a_1( 3, 3 ) );
-				EXPECT_TRUE( r.AddActor( &a_1 ) );
+				EXPECT_TRUE( z.AddActor( &a_1 ) );
 			}
 
 			std::cout << r2cm::split;
@@ -141,7 +141,7 @@ namespace test_pmr_room
 				std::cout << r2cm::linefeed;
 
 				DECLARATION_MAIN( pmr::Actor a_2( 3, 3 ) );
-				EXPECT_FALSE( r.AddActor( &a_2 ) );
+				EXPECT_FALSE( z.AddActor( &a_2 ) );
 
 			}
 
@@ -152,8 +152,8 @@ namespace test_pmr_room
 
 				std::cout << r2cm::linefeed;
 
-				DECLARATION_MAIN( pmr::Actor a_3( static_cast<pmr::Actor::Point::ValueT>( r.GetWidth() ), static_cast<pmr::Actor::Point::ValueT>( r.GetHeight() ) ) );
-				EXPECT_FALSE( r.AddActor( &a_3 ) );
+				DECLARATION_MAIN( pmr::Actor a_3( static_cast<pmr::Actor::Point::ValueT>( z.GetWidth() ), static_cast<pmr::Actor::Point::ValueT>( z.GetHeight() ) ) );
+				EXPECT_FALSE( z.AddActor( &a_3 ) );
 			}
 
 			std::cout << r2cm::split;
@@ -164,13 +164,13 @@ namespace test_pmr_room
 				std::cout << r2cm::linefeed;
 
 				DECLARATION_MAIN( pmr::Actor a_4( 0, 0 ) );
-				EXPECT_FALSE( r.AddActor( &a_4 ) );
+				EXPECT_FALSE( z.AddActor( &a_4 ) );
 			}
 
 			std::cout << r2cm::split;
 
 			{
-				PrintRoom( r );
+				PrintRoom( z );
 			}
 
 			std::cout << r2cm::split;
@@ -185,7 +185,7 @@ namespace test_pmr_room
 	{
 		return []()->const char*
 		{
-			return "Room : Demo";
+			return "Zone : Demo";
 		};
 	}
 	r2cm::iItem::DoFunctionT Demo::GetDoFunction() const
@@ -194,18 +194,18 @@ namespace test_pmr_room
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( pmr::Room r( 10, 10 ) );
-			PROCESS_MAIN( pmr::RoomBuilder( &r ) );
+			DECLARATION_MAIN( pmr::Zone z( 10, 10 ) );
+			PROCESS_MAIN( pmr::RoomBuilder( &z ) );
 
 			std::cout << r2cm::linefeed;
 
 			DECLARATION_MAIN( pmr::Actor a_1( 3, 3 ) );
-			EXPECT_TRUE( r.AddActor( &a_1 ) );
+			EXPECT_TRUE( z.AddActor( &a_1 ) );
 
 			std::cout << r2cm::linefeed;
 
 			DECLARATION_MAIN( pmr::Actor a_2( 5, 5 ) );
-			EXPECT_TRUE( r.AddActor( &a_2 ) );
+			EXPECT_TRUE( z.AddActor( &a_2 ) );
 
 			std::cout << r2cm::split;
 
@@ -242,7 +242,7 @@ namespace test_pmr_room
 					// View
 					//
 					r2cm::WindowUtility::MoveCursorPointWithClearBuffer( pivot_point );
-					PrintRoom( r );
+					PrintRoom( z );
 
 					//
 					// Input

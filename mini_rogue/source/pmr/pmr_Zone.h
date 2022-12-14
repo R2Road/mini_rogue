@@ -9,13 +9,13 @@ namespace pmr
 		Wall,
 	};
 
-	class Room
+	class Zone
 	{
 	public:
 		using Terrain = r2::Grid<Tile>;
 		using ActorContainer = std::vector<class Actor*>;
 
-		Room( const uint32_t width, const uint32_t height );
+		Zone( const uint32_t width, const uint32_t height );
 
 		//
 		// Getter
@@ -59,5 +59,5 @@ namespace pmr
 		ActorContainer mActorContainer;
 	};
 
-	void RoomBuilder( Room* out_room );
+	void RoomBuilder( Zone* out_room );
 }
