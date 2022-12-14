@@ -20,7 +20,7 @@ namespace pmr
 		const char String4Version[21] = { 'M', 'i', 'n', 'i', 'R', 'o', 'g', 'u', 'e', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '.', VersionNumber_4, '\0' };
 
 
-		const char* const String4Road2Version_0_0_1 = {
+		const char* const String4Road2Version_0_0_1_0 = {
 					"### Version Rule ###"
 			"\n"
 			"\n"	"> " "1.0.0.0"  " : "  "√‚Ω√"
@@ -57,8 +57,8 @@ namespace pmr
 			"\n"	"[ ] " "Add System : Statistics"
 		};
 
-		const char* const String4Road2Version_0_0_0 = {
-			"### Road 2 Version 0.0.0 ###"
+		const char* const String4Road2Version_0_0_0_0 = {
+			"### Road 2 Version 0.0.0.0 ###"
 			"\n"
 			"\n"	"[o] " "Make Project"
 			"\n"	"[o] " "Cleanup"
