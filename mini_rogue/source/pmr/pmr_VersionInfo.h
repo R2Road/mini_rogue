@@ -50,7 +50,7 @@ namespace pmr
 			"\n"	"    " "[o] " "Member : Grid"
 			"\n"	"    " "[o] " "Function : Grid Build : 10 x 10, 방을 둘러싼 벽"
 			"\n"	"[ ] " "Actor"
-			"\n"	"    " "[o] " "Add Actor Type"
+			"\n"	"    " "[o] " "Add Type : Actor"
 			"\n"	"    " "[ ] " "AI : Move"
 			"\n"	"    " "[ ] " "AI : Interaction Between Actor 2 Actor"
 			"\n"	"[ ] " "Add System : AI Base( fsm? b-tree? )"
