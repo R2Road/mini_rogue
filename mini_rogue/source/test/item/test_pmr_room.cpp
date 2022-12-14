@@ -1,5 +1,7 @@
 #include "test_pmr_room.h"
 
+#include <conio.h>
+
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
@@ -208,7 +210,46 @@ namespace test_pmr_room
 			std::cout << r2cm::split;
 
 			{
-				PrintRoom( r );
+				const auto pivot_point = r2cm::WindowUtility::GetCursorPoint();
+				int input = 0;
+
+				do
+				{
+					switch( input )
+					{
+						//
+						// Arrow
+						//
+					case 'w':
+						break;
+					case 'a':
+						break;
+					case 's':
+						break;
+					case 'd':
+						break;
+
+						//
+						//
+						//
+
+
+					default:
+						break;
+					}
+
+					//
+					// View
+					//
+					r2cm::WindowUtility::MoveCursorPointWithClearBuffer( pivot_point );
+					PrintRoom( r );
+
+					//
+					// Input
+					//
+					input = _getch();
+
+				} while( 27 != input );
 			}
 
 			std::cout << r2cm::split;
