@@ -32,22 +32,22 @@ namespace test_pmr_zone
 		for( const auto& a : z.GetActorContainer() )
 		{
 			r2cm::WindowUtility::MoveCursorPoint( { ( pivot.x + (short)a->GetX() ) * 2, pivot.y + (short)a->GetY() } );
-			std::cout << r2cm::clm( r2cm::eColor::BG_Blue ) << r2cm::clm( r2cm::eColor::FG_Yellow ) << "A" << r2cm::clm();
+			std::cout << clm( r2cm::eColor::BG_Blue ) << clm( r2cm::eColor::FG_Yellow ) << "A" << clm();
 		}
 
 		r2cm::WindowUtility::MoveCursorPoint( { 0, pivot.y + (short)z.GetHeight() } );
 	}
 
-	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
+	r2cm::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Zone : Declaration";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration::GetDoFunction() const
+	r2cm::DoFunctionT Declaration::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -63,22 +63,22 @@ namespace test_pmr_zone
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Builder::GetTitleFunction() const
+	r2cm::TitleFunctionT Builder::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Zone : Builder";
 		};
 	}
-	r2cm::iItem::DoFunctionT Builder::GetDoFunction() const
+	r2cm::DoFunctionT Builder::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -100,22 +100,22 @@ namespace test_pmr_zone
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Actor::GetTitleFunction() const
+	r2cm::TitleFunctionT Actor::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Zone : Actor";
 		};
 	}
-	r2cm::iItem::DoFunctionT Actor::GetDoFunction() const
+	r2cm::DoFunctionT Actor::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -175,22 +175,22 @@ namespace test_pmr_zone
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Demo::GetTitleFunction() const
+	r2cm::TitleFunctionT Demo::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Zone : Demo";
 		};
 	}
-	r2cm::iItem::DoFunctionT Demo::GetDoFunction() const
+	r2cm::DoFunctionT Demo::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -254,7 +254,7 @@ namespace test_pmr_zone
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 }

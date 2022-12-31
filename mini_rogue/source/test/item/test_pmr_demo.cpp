@@ -7,16 +7,16 @@
 
 namespace test_pmr_demo
 {
-	r2cm::iItem::TitleFunctionT Basic::GetTitleFunction() const
+	r2cm::TitleFunctionT Basic::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Demo";
 		};
 	}
-	r2cm::iItem::DoFunctionT Basic::GetDoFunction() const
+	r2cm::DoFunctionT Basic::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -25,7 +25,7 @@ namespace test_pmr_demo
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 }

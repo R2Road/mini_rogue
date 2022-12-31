@@ -12,16 +12,16 @@ namespace test_pmr_actor
 		return o << "x : " << p.GetX() << "y : " << p.GetY() << r2cm::linefeed;
 	}
 
-	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
+	r2cm::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Actor : Declaration";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration::GetDoFunction() const
+	r2cm::DoFunctionT Declaration::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -41,22 +41,22 @@ namespace test_pmr_actor
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Point::GetTitleFunction() const
+	r2cm::TitleFunctionT Point::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Actor : Point";
 		};
 	}
-	r2cm::iItem::DoFunctionT Point::GetDoFunction() const
+	r2cm::DoFunctionT Point::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -81,7 +81,7 @@ namespace test_pmr_actor
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 }

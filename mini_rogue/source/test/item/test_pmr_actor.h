@@ -7,14 +7,14 @@ namespace test_pmr_actor
 	class Declaration : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() const override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
 	class Point : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() const override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 }

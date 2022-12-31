@@ -7,16 +7,16 @@
 
 namespace test_pmr_game
 {
-	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
+	r2cm::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Game : Declaration";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration::GetDoFunction() const
+	r2cm::DoFunctionT Declaration::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -26,7 +26,7 @@ namespace test_pmr_game
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 }
