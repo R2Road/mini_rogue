@@ -17,19 +17,21 @@ namespace pmr
 		const char VersionNumber_3 = '0';
 		const char VersionNumber_4 = '0';
 
-		const char String4Version[21] = { 'M', 'i', 'n', 'i', 'R', 'o', 'g', 'u', 'e', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '.', VersionNumber_4, '\0' };
-
-
-		const char* const String4Road2Version_0_0_1_0 = {
+		const char* const String4VersionRule = {
 					"### Version Rule ###"
 			"\n"
 			"\n"	"> " "1.0.0.0"  " : "  "출시"
 			"\n"	"> " "0.1.0.0"  " : "  "10개의 Road 마다 1씩 증가"
 			"\n"	"> " "0.0.1.0"  " : "  "Road 를 완주했다."
 			"\n"	"> " "0.0.0.1"  " : "  "자잘한 수정이 있었다."
-			"\n"
-			"\n"
-			"\n"	"### Game 구성( 가장 단순한 방식으로 만든다 ) ###"
+		};
+
+		const char String4Version[21] = { 'M', 'i', 'n', 'i', 'R', 'o', 'g', 'u', 'e', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '.', VersionNumber_4, '\0' };
+
+
+
+		const char* const String4Road2Version_0_0_1_0 = {
+					"### Game 구성( 가장 단순한 방식으로 만든다 ) ###"
 			"\n"
 			"\n"	"> " "Game               "  " : "  "같은 크기 방들로 구성( 1개 ~ N개 )"
 			"\n"	"> " "Zone               "  " : "  "10 x 10"
