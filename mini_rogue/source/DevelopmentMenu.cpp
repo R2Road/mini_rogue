@@ -40,6 +40,10 @@ r2cm::DescriptionFunctionT DevelopmentMenu::GetDescriptionFunction() const
 			+ "\n"
 			  "\n"
 			  "\n"
+			+ pmr::VersionInfo.String4DevelopementRule
+			+ "\n"
+			  "\n"
+			  "\n"
 			+ pmr::VersionInfo.String4Road2Version_0_0_1_0;
 		return ret.c_str();
 	};

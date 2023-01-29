@@ -30,7 +30,7 @@ namespace pmr
 
 
 
-		const char* const String4Road2Version_0_0_1_0 = {
+		const char* const String4DevelopementRule = {
 					"### Game 구성( 가장 단순한 방식으로 만든다 ) ###"
 			"\n"
 			"\n"	"> " "Game               "  " : "  "같은 크기 방들로 구성( 1개 ~ N개 )"
@@ -38,9 +38,12 @@ namespace pmr
 			"\n"	"> " "Turn               "  " : "  "각 액터가 돌아가면서 1회씩 수행"
 			"\n"	"> " "Actor[ Move ]      "  " : "  "4방향 가능"
 			"\n"	"> " "Actor[ Interaction]"  " : "  "8방향 가능"
-			"\n"
-			"\n"
-			"\n"	"### Road 2 Version 0.0.1.0 ###"
+		};
+
+
+
+		const char* const String4Road2Version_0_0_1_0 = {
+					"### Road 2 Version 0.0.1.0 ###"
 			"\n"
 			"\n"	"[o] " "Zone"
 			"\n"	"    " "[o] " "Add Type : Zone"
